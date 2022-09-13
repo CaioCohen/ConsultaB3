@@ -2,7 +2,7 @@
   "profiles": {
     "ConsultaB3": {
       "commandName": "Project",
-      "commandLineArgs": "IBM 22.67 22.59"
+      "commandLineArgs": "RELIANCE.BSE 127.5 127.0"
     }
   }
 }

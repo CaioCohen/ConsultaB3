@@ -1,4 +1,5 @@
-﻿using ConsultaB3.models;
+﻿using ConsultaB3.Classes;
+using ConsultaB3.models;
 using MailKit;
 using MailKit.Net.Imap;
 using MailKit.Net.Smtp;
@@ -10,16 +11,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IMAPTraining.Classes
+namespace ConsultaB3.Classes
 {
     public class EmailClient
     {
 
-        public void sendEmail(Email email, ComunicacaoConfig comunicacao)
+        public void sendEmail(ComunicacaoConfig comunicacao, Email email)
         {
             var message = new MimeMessage();
-            message.From.Add(new MailboxAddress(email.toEmail, email.fromEmail));
-            message.To.Add(new MailboxAddress(email.toName, email.toEmail));
+            message.From.Add(new MailboxAddress(comunicacao.FromName, comunicacao.FromEmail));
+            message.To.Add(new MailboxAddress(comunicacao.ToName, comunicacao.ToEmail));
             message.Subject = email.subject;
 
             message.Body = new TextPart("plain")
@@ -32,7 +33,7 @@ namespace IMAPTraining.Classes
                 client.ServerCertificateValidationCallback = (s, c, h, e) => true;
 
                 client.Connect(comunicacao.SMTP, comunicacao.Port);
-                client.Authenticate(comunicacao.Email, comunicacao.Password);
+                client.Authenticate(comunicacao.FromEmail, comunicacao.Password);
                 client.Send(message);
                 client.Disconnect(true);
             }

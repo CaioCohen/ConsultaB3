@@ -1,0 +1,9 @@
+{
+  "SMTP": "smtp-mail.outlook.com",
+  "Port": 587,
+  "FromEmail": "caiocdsteste@outlook.com",
+  "FromName": "API",
+  "Password": "Sapatovelho1",
+  "ToEmail": "caiocds02@gmail.com",
+  "ToName": "Caio Cohen"
+}

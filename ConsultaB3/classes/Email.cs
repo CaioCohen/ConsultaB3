@@ -4,14 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IMAPTraining.Classes
+namespace ConsultaB3.Classes
 {
     public class Email
     {
-        public string fromName { get; set; }
-        public string fromEmail { get; set; }
-        public string toName { get; set; }
-        public string toEmail { get; set; }
         public string subject { get; set; }
         public string body { get; set; }
     }

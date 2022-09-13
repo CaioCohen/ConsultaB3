@@ -8,12 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="bin\Debug\net6.0\local.settings.json" />
+    <PackageReference Include="MailKit" Version="3.4.1" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.9" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MailKit" Version="3.4.1" />
-    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.9" />
+    <Folder Include="bin\Debug\net6.0\" />
   </ItemGroup>
 
 </Project>
