@@ -16,8 +16,8 @@ string url = $"https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol={a
 try
 {
     HttpClient http = HttpClientFactory.Create();
-    var retorno = http.GetStringAsync(url).Result.ToString();
-    APIReturn dados = JsonConvert.DeserializeObject<APIReturn>(retorno);
+    var retorno = http.GetAsync(url);
+    APIReturn dados = retorno.Result.Content.ReadAsAsync<APIReturn>().Result;
     Console.WriteLine(dados.GlobalQuote._05Price);
 }catch (Exception ex)
 {
