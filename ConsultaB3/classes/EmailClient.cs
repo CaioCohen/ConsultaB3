@@ -15,7 +15,7 @@ namespace ConsultaB3.Classes
 {
     public class EmailClient
     {
-
+        //Usei o mailkit para criar o client de email
         public void sendEmail(ComunicacaoConfig comunicacao, Email email)
         {
             var message = new MimeMessage();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsultaB3.Classes
 {
-    public class Email
+    public class Email//modelo de email
     {
         public string subject { get; set; }
         public string body { get; set; }

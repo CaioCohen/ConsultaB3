@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsultaB3.models
+namespace ConsultaB3.models //modelo que a api alphavantage retorna
 {
     public class GlobalQuote
     {

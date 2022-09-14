@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsultaB3.models
 {
-    public class ComunicacaoConfig
+    public class ComunicacaoConfig //configuracao necessaria pra comunicacao
     {
         public string SMTP { get; set; }
         public int Port { get; set; }
