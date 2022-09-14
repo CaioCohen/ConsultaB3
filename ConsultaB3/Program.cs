@@ -20,6 +20,9 @@ string url = $"https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol={a
 //que eu encontrei, as outras tinham que pagar, por isso que estou usando ela, mas ela não permite fazer certas consultas
 //Na verdade, as únicas consultas que ela permite, de acordo com a documentação, são :
 //IBM,TSCO.LON, SHOP.TRT, GPV.TRV, DAI.DEX, RELIANCE.BSE , 600104.SHH, 000002.SHZ
+//Eu tentei usar o link que me foi passado que baixava um .xml do dia do pregão, mas os arquivos parece que estavam vindo em binário, ou bytes[].
+//Não entendi como operar com aquele arquivo, eu ja trabalhei com arquivo .xml, mas ele vinha bem estruturado, eu nunca mexi com um arquivo que vem
+//daquele jeito
 try
 {
     
