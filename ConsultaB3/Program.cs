@@ -1,4 +1,4 @@
-﻿using ConsultaB3.Classes;
+using ConsultaB3.Classes;
 using ConsultaB3.models;
 using Newtonsoft.Json;
 using System.Net.Http;
@@ -6,7 +6,7 @@ using System.Text.Json;
 
 Console.WriteLine($"{args?[0]}");
 
-string configText = File.ReadAllText("../../../local.settings.json");
+string configText = File.ReadAllText("local.settings.json");
 ComunicacaoConfig comunicacao = System.Text.Json.JsonSerializer.Deserialize<ComunicacaoConfig>(configText);
 Email email = new Email();
 email.subject = $"Preço ação {args?[0]}";
